@@ -41,7 +41,7 @@ async function server() {
     });
 
     //ADD NEW REVIEW TO DB
-    app.post("/reviews", async (req, res) => {
+    app.post('/reviews', async (req, res) => {
       const review = req.body;
       const result = await reviewCollection.insertOne(review);
       res.json(result);
